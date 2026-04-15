@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدرسة أنس بن مالك للتعليم الأساسي 5-7</title>
+    <meta name="description" content="الموقع الرسمي لمدرسة أنس بن مالك 2026 يعرض الأخبار والأنشطة وأسماء الأوائل.">
+    <meta name="keywords" content="مدرسة أنس بن مالك, تعليم, أنشطة, أوائل, طلاب">
+    <meta name="author" content="Omar Ahmed Soliman">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="الموقع الرسمي لمدرسة أنس بن مالك 2026">
+    <meta property="og:description" content="تابع أخبار وأنشطة المدرسة.">
+    <meta property="og:image" content="https://example.com/school-image.jpg">
+    <meta name="theme-color" content="#8A1538">
+    <link rel="icon" href="./imgs/WhatsApp Image 2026-03-01 at 15.16.49.jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo&family=Tajawal&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="mode">
+        <button class="night-btn" onclick="dark()">night</button>
+        <button class="light-btn" onclick="light()">light</button>
+    </div>
+    <nav class=" navbar  navbar-expand-lg navbar-dark  shadow-sm sticky-top">
+        <div class="container">
+            <div>
+                <img src="./imgs/WhatsApp Image 2026-03-01 at 15.16.49.jpeg" class="logo-img" alt="">
+
+                <a class="navbar-brand " href="./home.html">مدرسة أنس بن مالك 5-7</a>
+
+            </div>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./home.html">الصفحة الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./news.html">الأخبار</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./names.html">الهيئة التعليمية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./tables.html">الجداول الدراسية</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            الأوائل
+                        </a>
+
+
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="./the-5-tops.html">أوائل الصف الخامس</a></li>
+                            <li><a class="dropdown-item" href="./the-6-tops.html">أوائل الصف السادس</a></li>
+                            <li><a class="dropdown-item" href="./the-7-tops.html"> أوائل الصف السابع</a></li>
+
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <section class="container mt-5 d-flex justify-content-center align-items-center p-4">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>م</th>
+                    <th>الاسم</th>
+                    <!-- <th>المجموع / 600</th> -->
+                    <th>النسبة</th>
+                    <th>الفصل</th>
+                    <th>الترتيب</th>
+                </tr>
+            </thead>
+            <tbody id="data-rows-s6">
+            </tbody>
+        </table>
+
+        <script>
+            (function () {
+                const studentsS6 = [
+                    [1, "احمد محمود محمد كامل عوض", 598, "سادس/4", 1],
+                    [2, "زين الدين احمد علي أحمد", 598, "سادس/4", 1],
+                    [3, "عبدالرحمن ضياء حسن احمد البرنيالي", 596, "سادس/4", 2],
+                    [4, "ادم محمد عبده علي محمد", 595, "سادس/6", 3],
+                    [5, "مصطفى العليوي", 595, "سادس/4", 3],
+                    [6, "حمزه ادريس محمد علي", 594, "سادس/4", 4],
+                    [7, "ادم احمد السيد عبدالفتاح رزق", 590, "سادس/4", 5],
+                    [8, "معتز جمال محمد", 589, "سادس/5", 6],
+                    [9, "صالح وائل يوسف عرفات", 588, "سادس/2", 7],
+                    [10, "رسلان رفيق سوسي", 587, "سادس/8", 8],
+                    [11, "أيوب بن المنصف ابن علي", 586, "سادس/5", 9],
+                    [12, "احمد سامح محمد اسماعيل", 585, "سادس/4", 10],
+                    [13, "سهيل بن ياسر بن فضل عباس العجمي", 584, "سادس/5", 11],
+                    [14, "طارق جعفر الصديق الامين", 584, "سادس/4", 11],
+                    [15, "محمد احمد محمد", 582, "سادس/8", 12],
+                    [16, "احمد بن سامي بن احمد اسماعيل بيت دشيشة", 582, "سادس/5", 12],
+                    [17, "احمد صديق زين العابدين محمد", 582, "سادس/4", 12],
+                    [18, "علي محمد عبدالسلام احمد الشوبكي", 581, "سادس/4", 13],
+                    [19, "احمد اسلام محمود عبدالوهاب", 580, "سادس/2", 14],
+                    [20, "آسر محمود صبحي حسين شحاته", 579, "سادس/11", 15],
+                    [21, "الحسين عادل حسين علي", 579, "سادس/11", 15],
+                    [22, "محمد رضا جلال امام", 579, "سادس/11", 15],
+                    [23, "محمد احمد ابراهيم حجازي", 577, "سادس/6", 16],
+                    [24, "محمد خالد سعيد", 575, "سادس/9", 17],
+                    [25, "عمار حامد منصور الهتاري", 575, "سادس/4", 17],
+                    [26, "عبدالله بن احمد بن محمد علوي الكاف", 573, "سادس/2", 18],
+                    [27, "علي بن علوي بن عبدالرحمن عمر المرزع باعبود", 572, "سادس/9", 19],
+                    [28, "امين اسعد امين عبدالمنعم", 572, "سادس/4", 19],
+                    [29, "فهد حسين نوري عوض", 569, "سادس/4", 20],
+                    [30, "محمد ايمن رجب اسماعيل العدوي", 569, "سادس/4", 20],
+                    [31, "معاذ احمد الشحات راغب دهبيه", 568, "سادس/5", 21],
+                    [32, "يعقوب بن خليل بن ابراهيم فتح بيت خريف", 568, "سادس/5", 21],
+                    [33, "عبدالعزيز محمد دحان محمد العري", 567, "سادس/2", 22],
+                    [34, "أبي ياسر احمد محمد بيصار", 566, "سادس/11", 23],
+                    [35, "محمد مهيار بن علي الصالح عدوني", 563, "سادس/10", 24],
+                    [36, "محمود مصعب عمر سرالختم", 563, "سادس/8", 24],
+                    [37, "تركي بن محمود بن أحمد عوض الشنفري", 560, "سادس/9", 25],
+                    [38, "أحمد حازم أحمد عبدالشافي سليمان", 559, "سادس/10", 26],
+                    [39, "مازن بن عمار بن ياسر رجب النوبي", 559, "سادس/5", 26],
+                    [40, "يزن صافي خضير", 559, "سادس/4", 26],
+                    [41, "همام محمد عبدالطلب محمد", 557, "سادس/11", 27],
+                    [42, "احمد معتصم محمد احمد محمد", 557, "سادس/4", 27],
+                    [43, "أحمد بن عبدالله بن احمد باعمر", 556, "سادس/8", 28],
+                    [44, "مازن محمود محمد رشاد", 554, "سادس/8", 29],
+                    [45, "سالم بن حامد بن سالم عبدالله المهندس اليافعي", 554, "سادس/6", 29],
+                    [46, "محمد فوزي شمسان محمد المدحجي", 554, "سادس/2", 29],
+                    [47, "محمود احمد عابدين سليمان", 553, "سادس/5", 30],
+                    [48, "سالم بن ايمن بن سالم اليافعي", 551, "سادس/6", 31],
+                    [49, "عبدالله حسين موسى", 551, "سادس/3", 31],
+                    [50, "عبدالله بن اكرم بن عبدالرسول منصور الصرنج", 550, "سادس/5", 32],
+                    [51, "يوسف احمد يوسف الخليلي", 550, "سادس/4", 32],
+                    [52, "محمد طائف عبدالفتاح عبدالنصيح", 550, "سادس/4", 32],
+                    [53, "سفيان بن شماس بن حميد خميس بيت حتراص", 548, "سادس/7", 33],
+                    [54, "محمد بن نواف بن محمد علي المردوف الكثيري", 548, "سادس/1", 33],
+                    [55, "أسعد منتصر الطيب محمد", 547, "سادس/8", 34],
+                    [56, "الحسن بن فيصل بن نصيب رمضان بيت مستهيل", 547, "سادس/6", 34],
+                    [57, "احمد عبدالسلام ايوب ابداح", 547, "سادس/2", 34],
+                    [58, "عبدالحكيم حافظ احمد سعيد شعنوت الكثيري", 546, "سادس/8", 35],
+                    [59, "محسن بن عمر بن سعيد محسن بيت غواص", 546, "سادس/8", 35],
+                    [60, "محمد عبدالمحسن محمد احمد عبدالرحمن", 545, "سادس/8", 36],
+                    [61, "عبدالله بن محمد بن عبدالله محمد العجيلي", 544, "سادس/1", 37],
+                    [62, "محمد بن خالد بن محمد سعيد المشيخي", 543, "سادس/6", 38],
+                    [63, "هاشم بن عبدالله بن علوي محمد الكاف", 543, "سادس/4", 38],
+                    [64, "عمر بن مدين بن غالب منصور الشنفري", 542, "سادس/9", 39],
+                    [65, "ياسين عبدالرحمن المبارك الشيخ ادريس", 542, "سادس/8", 39],
+                    [66, "مشعل بن باسم بن جمعان الماس ملهي", 542, "سادس/5", 39],
+                    [67, "مصطفى شريف شعبان البسيوني شعبان", 542, "سادس/3", 39],
+                    [68, "صالح بن حامد بن محمد صالح باحجاج", 541, "سادس/10", 40],
+                    [69, "محمد ياسر محمد عبدالرحمن", 541, "سادس/10", 40],
+                    [70, "محمد بن حامد بن بخيت مسلم الكثيري", 541, "سادس/6", 40],
+                    [71, "محمد بن علي بن راشد شوين اليعقوبي", 541, "سادس/2", 40]
+                ];
+
+                const body = document.getElementById('data-rows-s6');
+                studentsS6.forEach(s => {
+                    let total = s[2];
+                    let percent = (total / 600) * 100;
+                    let rounded = Math.round(percent * 10) / 10;
+
+                    body.innerHTML += `<tr>
+        <td>${s[0]}</td> <td>${s[1]}</td> <td>${rounded.toFixed(1)}%</td> <td>${s[3]}</td> <td>${s[4]}</td> </tr>`;
+                });
+            })();
+        </script>
+    </section>
+    <footer class="">
+        Website Development
+        Designed and Developed by
+        <span class="gold">7/4 Omar Ahmed Soliman - عمر أحمد سليمان</span>
+        © 2026 Ans Bin Malik School. All Rights Reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./main.js"></script>
+<script>
+function applyDark(){
+    document.querySelectorAll("*:not(nav):not(nav *)").forEach(el => {
+        el.style.setProperty("background-color", "#111", "important");
+        el.style.setProperty("color", "#ddd", "important");
+    });
+
+    document.querySelector("nav").style.setProperty("background-color", "rgb(87,17,34)", "important");
+
+    document.querySelectorAll("nav *").forEach(el => {
+        el.style.setProperty("background-color", "rgb(87,17,34)", "important");
+    });
+}
+
+function applyLight(){
+    document.querySelectorAll("*").forEach(el => {
+        el.style.removeProperty("background-color");
+        el.style.removeProperty("color");
+    });
+}
+
+function dark(){
+    localStorage.setItem("theme", "dark");
+    applyDark();
+}
+
+function light(){
+    localStorage.setItem("theme", "light");
+    applyLight();
+}
+
+// تشغيل تلقائي عند فتح أي صفحة
+window.addEventListener("load", () => {
+    if(localStorage.getItem("theme") === "dark"){
+        applyDark();
+    } else {
+        applyLight();
+    }
+});
+</script>
+</body>
+
+</html>
